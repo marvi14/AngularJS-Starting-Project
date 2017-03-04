@@ -2,12 +2,13 @@
 define([
     'angular',
     'angularCouchPotato',
-    'angularRoute'
+    'angularUiRouter'
 ], function(angular, couchPotato) {
-    var module = angular.module('myApp.404', ['ngRoute']);
+    var module = angular.module('myApp.404', ['ui.router']);
 
-    module.config(['$routeProvider', '$couchPotatoProvider', function($routeProvider, $couchPotatoProvider) {
-        $routeProvider.when('/404', {
+    module.config(['$stateProvider', '$couchPotatoProvider', function($stateProvider, $couchPotatoProvider) {
+        $stateProvider.state('404', {
+            url:'/404',
             templateUrl: './modules/404/views/404.html',
             controller: '404Ctrl',
             resolve: {

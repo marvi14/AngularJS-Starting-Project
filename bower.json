@@ -40,7 +40,8 @@
     "angular-web-notification": "1.0.19",
     "html5-desktop-notifications": "^3.0.0",
     "ng-infinite-scroll": "^0.0.1",
-    "ngInfiniteScroll": "1.0.0"
+    "ngInfiniteScroll": "1.0.0",
+    "angular-ui-router": "0.3.1"
   },
   "devDependencies": {},
   "resolutions": {

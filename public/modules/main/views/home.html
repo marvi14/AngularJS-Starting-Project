@@ -1,3 +1,88 @@
-<div>
-    <img src="img/angular.jpg" style="width: 100%; height: 100vh;" />
+<div class="photo-parallax-1">
+    <div id="subheader" style="min-height: 400px;"></div>
+</div>
+<div class="container margin_60_35" id="user_plates">
+    <div id="container_pin">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="strip_list wow fadeIn" data-wow-delay="0.2s" ng-repeat="item in posts track by $index">
+                    <div class="row">
+                        <div class="col-md-9 col-sm-9">
+                            <div class="desc">
+                                <div class="thumb_strip">
+                                    <a><img ng-src="{{item.pictures[0]}}" alt=""></a>
+                                </div>
+                                <div class="rating">
+                                    <rating class="rating-directive" score="item.rating.value_ratings"></rating> (<small><a href="" ng-click="openProductPreview(item)">{{item.rating.number_ratings}} {{'REVIEWS' | translate}}</a></small>)
+                                </div>
+                                <h3 style="color: #ce664e;cursor: pointer;" ng-click="openProductPreview(item)">{{item.name}}</h3>
+                                <div class="type">
+                                    {{'TYPES' | translate}}: {{getType(item.preparation.id)}}
+                                </div>
+                                <div class="location">
+                                    {{'PRICE_TEXT' | translate}}: ${{item.price | number: 2}}
+                                </div>
+                                <ul style="margin-top: 10px;">
+                                    <li ng-if="isOpened(item)">{{openText}}<i class="icon_check_alt2 ok"></i></li>
+                                    <li ng-if="!isOpened(item)">{{closedText}}<i class="icon_close_alt2 no"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <div style="margin-top: 15px;margin-bottom: 15px;">
+                                <a ng-click="openProductPreview(item)" class="btn_1"><i class="icon-plus" style="margin-right: 5px;"></i>{{'OPEN_PRODUCT_PREVIEW' | translate}}</a>
+                            </div>
+                            <div>
+                                <a ng-click="selectProductDetails(item)" class="btn_1" ng-class="{cartDisabled: item.isClosed}"><i class="icon-cart" style="margin-right: 5px;"></i>{{'ADD_TO_CART' | translate}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" class="sidebar">
+                <div class="theiaStickySidebar">
+                    <div id="cart_box">
+                        <h3>{{'YOUR_ORDER' | translate}} <i class="icon_cart_alt pull-right"></i></h3>
+                        <table class="table table_summary">
+                            <tbody>
+                                <tr ng-repeat="item in cart | filter: searchFilter track by $index" ng-if="cart.length > 0">
+                                    <td>
+                                        <a href="" class="remove_item" ng-click="removeFromCart(item)"><i class="icon_minus_alt"></i></a> <strong>{{item.amount}} x</strong> {{item.name}}
+                                    </td>
+                                    <td>
+                                        <strong class="pull-right" style="margin-top: 3px;">${{item.price}}</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <p style="margin-bottom: -5px;" ng-if="cart.length == 0"><i class="icon_cart" style="margin-right: 10px;"></i>{{'EMPTY_CART' | translate}}</p>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <table class="table table_summary">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        {{'SUBTOTAL' | translate}} <span class="pull-right">${{calculateSubTotal() | number: 2}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        {{'IVA' | translate}} <span class="pull-right">${{calculateIVA() | number: 2}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="total">
+                                        {{'TOTAL' | translate}} <span class="pull-right">${{calculateTotal()}}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr>
+                        <a class="btn_full" href="" ng-click="goToCheckout()" ng-class="{cartDisabled: cart.length == 0}">{{'CONFIRM_CART' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

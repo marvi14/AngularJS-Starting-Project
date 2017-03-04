@@ -4,8 +4,8 @@ define(['modules/main/module'], function(module) {
     module.registerController('mainCtrl', ['$scope', '$translate', '$timeout', 'sessionService', 'ModalService', '$location', 'Main',
         function($scope, $translate, $timeout, sessionService, ModalService, $location, Main) {
 
-            Main.query().$promise.then(function(response) {
-                $scope.list = response.plates;
+            Main.getAllPosts().$promise.then(function(response) {
+                $scope.posts = response;
             }, function(error) {
                 error;
             });

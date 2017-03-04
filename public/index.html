@@ -33,9 +33,7 @@
 </head>
 
 <body id="body_id">
-    <!--[if lte IE 8]>
-        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
-    <![endif]-->
+    <!--LOADER INICIAL DE LA APLICACION-->
     <div id="preloader">
         <div class="sk-spinner sk-spinner-wave" id="status">
             <div class="sk-rect1"></div>
@@ -47,16 +45,17 @@
     </div>
     <!-- End Preload -->
     <!-- Header ================================================== -->
+    <!--DIRECTIVA QUE SE ENCARGA DEL MENU DE LA PAGINA-->
     <menu></menu>
     <!-- End Header =============================================== -->
     <!-- Content ================================================== -->
-    <div ng-cloak ng-view id="main_div"></div>
+    <div ng-cloak ui-view id="main_div"></div>
     <!-- End Content =============================================== -->
     <!-- Footer ================================================== -->
+    <!--TAMBIEN SE PODRIA HABER HECHO UNA DIRECTIVA, PERO SE UTILIZO ESTO YA QUE NO ERA NECESARIO TENER NINGUNA LOGICA-->
     <ng-include src="'modules/layout/footer.html'"></ng-include>
     <!-- End Footer =============================================== -->
     <div class="layer"></div>
     <script data-main="require-config" src="lib/requirejs/require.js"></script>
 </body>
-
 </html>

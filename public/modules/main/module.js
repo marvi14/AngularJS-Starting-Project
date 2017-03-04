@@ -2,12 +2,13 @@
 define([
     'angular',
     'angularCouchPotato',
-    'angularRoute'
+    'angularUiRouter'
 ], function(angular, couchPotato) {
-    var module = angular.module('myApp.main', ['ngRoute']);
+    var module = angular.module('myApp.main', ['ui.router']);
 
-    module.config(['$routeProvider', '$couchPotatoProvider', function($routeProvider, $couchPotatoProvider) {
-        $routeProvider.when('/main', {
+    module.config(['$stateProvider', '$couchPotatoProvider', function($stateProvider, $couchPotatoProvider) {
+        $stateProvider.state('main', {
+            url:'/main',
             templateUrl: './modules/main/views/home.html',
             controller: 'mainCtrl',
             resolve: {
@@ -15,26 +16,6 @@ define([
                     './modules/main/controllers/mainCtrl',
                     './modules/main/controllers/modals/mainModalCtrl',
                     './modules/main/services/Main'
-                ])
-            }
-        });
-
-        $routeProvider.when('/terms', {
-            templateUrl: './modules/main/views/terms.html',
-            controller: 'termsCtrl',
-            resolve: {
-                deps: $couchPotatoProvider.resolveDependencies([
-                    './modules/main/controllers/termsCtrl'
-                ])
-            }
-        });
-
-        $routeProvider.when('/policy', {
-            templateUrl: './modules/main/views/policy.html',
-            controller: 'policyCtrl',
-            resolve: {
-                deps: $couchPotatoProvider.resolveDependencies([
-                    './modules/main/controllers/policyCtrl'
                 ])
             }
         });

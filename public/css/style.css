@@ -208,7 +208,7 @@ hr.styled {
 .btn_1,
 a.btn_1 {
     border: none;
-    background: #ce664e;
+    background: #4cc9c6;
     padding: 10px 10px;
     transition: all .3s;
     -webkit-border-radius: 3px;
@@ -221,14 +221,14 @@ a.btn_1 {
 
 .btn_1:hover,
 a.btn_1:hover {
-    background: #C8553A
+    background: #4cc9c6
 }
 
 .btn_full,
 a.btn_full {
     border: none;
     width: 100%;
-    background: #ce664e !important;
+    background: #4cc9c6 !important;
     padding: 12px 20px;
     transition: all .3s;
     -webkit-border-radius: 3px;
@@ -251,7 +251,7 @@ a.btn_side {
 
 .btn_full:hover,
 a.btn_full:hover {
-    background: #C8553A !important;
+    background: #4cc9c6 !important;
 }
 
 .btn_1.medium,
@@ -290,7 +290,7 @@ a.btn_map {
 }
 
 a.btn_map:hover {
-    background: #C8553A
+    background: #4cc9c6
 }
 
 a.btn_side {
@@ -311,7 +311,7 @@ a.btn_full_outline {
 }
 
 a.btn_side:hover {
-    background: #C8553A;
+    background: #4cc9c6;
     color: #fff
 }
 
@@ -326,8 +326,8 @@ a.btn_full_outline {
 }
 
 a.btn_full_outline:hover {
-    border: 2px solid #C8553A;
-    color: #C8553A
+    border: 2px solid #4cc9c6;
+    color: #4cc9c6
 }
 
 .button_intro,
@@ -372,7 +372,7 @@ a.button_intro.outilne {
 
 #cart_box .btn_full:hover,
 #cart_box a.btn_full:hover {
-    background: #C8553A
+    background: #4cc9c6
 }
 
 #cart_box a.btn_full_outline {
@@ -382,9 +382,9 @@ a.button_intro.outilne {
 }
 
 #cart_box a.btn_full_outline:hover {
-    color: #C8553A;
+    color: #4cc9c6;
     background: 0 0;
-    border: 2px solid #C8553A
+    border: 2px solid #4cc9c6
 }
 
 #social_footer,
@@ -510,7 +510,7 @@ a#promote {
 }
 
 a#promote:hover {
-    background-color: #C8553A
+    background-color: #4cc9c6
 }
 
 a#promote:before {
@@ -868,9 +868,9 @@ iframe {
 }
 
 .high_light a:hover {
-    background: #C8553A;
+    background: #4cc9c6;
     color: #fff;
-    border: 2px solid #C8553A
+    border: 2px solid #4cc9c6
 }
 
 #map {
@@ -1008,7 +1008,7 @@ a.strip_list:hover h3 {
 }
 
 .desc h3 a {
-    color: #C8553A
+    color: #4cc9c6
 }
 
 .desc h3 a:hover {
@@ -1358,7 +1358,7 @@ ul.additional_links li:first-child {
 }
 
 .table td.total_confirm {
-    background-color: #C8553A;
+    background-color: #4cc9c6;
     color: #fff
 }
 
@@ -2043,7 +2043,7 @@ select.form-control.form-white {
 }
 
 .modal-popup a.close-link:hover {
-    color: #C8553A;
+    color: #4cc9c6;
     text-decoration: none
 }
 
@@ -2369,7 +2369,7 @@ footer .form-group {
 }
 
 .panel-title a:hover .indicator {
-    color: #C8553A
+    color: #4cc9c6
 }
 
 .tab-content {
@@ -2419,7 +2419,7 @@ footer .form-group {
     font-weight: 600;
     color: #fff;
     box-shadow: -5px -5px 15px rgba(48, 54, 61, .2);
-    background: #C8553A;
+    background: #4cc9c6;
     opacity: 0;
     cursor: default;
     pointer-events: none
@@ -2481,7 +2481,7 @@ a.load_more_bt:hover {
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-color: #C8553A transparent transparent;
+    border-color: #4cc9c6 transparent transparent;
     border-width: 10px;
     margin-left: -10px
 }
@@ -2729,9 +2729,9 @@ a.bt_filters {
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    height: 450px;
+    height: 300px;
     position: relative;
-    background-image: url(../img/sub_header_short.jpg);
+    background-image: url(../img/sub_header_short.png);
     background-size: 100%;
 }
 
@@ -3602,8 +3602,8 @@ img .card:hover {
 
 .btn-warning:hover {
     color: #fff;
-    background-color: #C8553A;
-    border-color: #C8553A;
+    background-color: #4cc9c6;
+    border-color: #4cc9c6;
 }
 
 chip-tmpl {
